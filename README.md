@@ -16,9 +16,9 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 
 # Installation
 1. Clone the repository
-2. Install dependencies using `npm install`
+2. Install dependencies using ```npm install```
 3. Set up environment variables in .env file
-4. Start the server using `node index.js`
+4. Start the server using ```node index.js```
 
 # API Documentation
 ## Routes
@@ -30,17 +30,17 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 - Description: Get today's habit tracher page
 
 ### Get all Habits
-- URL: /habits
-- Method: GET
+- URL: ```/habits```
+- Method: ```GET```
 - status:200
 - Description: Retrieve all habits.
 
 ### Get Habit Record Page
-URL: ```/record/:id```
-Method: ```GET```
-Request Parameters: id (ID of the habit schema)
-status:200
-Description: Retrieve the record page for a specific habit.
+- URL: ```/record/:id```
+- Method: ```GET```
+- Request Parameters: id (ID of the habit schema)
+- status:200
+- Description: Retrieve the record page for a specific habit.
 
 ### Post a new habit (Habit page is a model. Thus not need for Get habit page) 
 - URL: ```/```
