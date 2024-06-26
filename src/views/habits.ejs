@@ -1,0 +1,39 @@
+<!-- if no habits are there -->
+
+<% if(habits.length==0){ %>
+<h3>
+  This habit tracker is designed to add multiple habits to track like reading a
+  book, going to the gym etc and to keep track each habit everyday
+</h3>
+<br />
+<h3>Start adding habits and keep track of them</h3>
+<% }else{ %>
+
+<!-- all habits -->
+<div class="row g-5">
+  <% habits.forEach((habit) => { %>
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title"><%=habit.habitName%></h5>
+      </div>
+      <div class="card-body">
+        <!-- notes -->
+        <% if(habit.notes){ %>
+        <p class="card-text"><%=habit.notes%></p>
+        <% } %>
+        <!-- how many days it is done -->
+        <p class="card-text">
+          <%=habit.habitName%> Done - <%=habit.doneDays%> out of
+          <%=habit.totalDays%> days
+        </p>
+        <a href="/record/<%=habit._id%>" class="btn btn-primary"
+          >Get records for 7 days</a
+        >
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<% } %>

@@ -1,0 +1,65 @@
+<!-- habit title -->
+<h3 id="today"><%=name%></h3>
+<br />
+
+<!-- record boxes -->
+<div class="row grid gap-5">
+  <% records.forEach((record) => { %>
+  <!-- firstbox -->
+  <div class="col-lg-12 border border-dark-subtle p-4 habit-box">
+    <form class="row g-3" method="post" action="/record/<%=record._id%>">
+      <!-- habit name -->
+      <div class="col">
+        <label for="date" class="visually-hidden"><%=record.date%></label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext habit"
+          id="date"
+          name="date"
+          value="<%=record.date%>"
+        />
+
+        <input
+          type="hidden"
+          class="form-control-plaintext"
+          id="habitName"
+          name="habitName"
+          value="<%=record.habitName%>"
+        />
+      </div>
+
+      <% if(record.status == "notDone"){ %>
+      <!-- not done action -->
+      <div class="col-auto record-wrong">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <% }else if(record.status == "done"){ %>
+      <!-- done action -->
+      <div class="col-auto record-success">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <% } %>
+
+      <!-- seclect the action -->
+      <div class="col">
+        <label for="select-habit" class="visually-hidden">Select</label>
+        <select
+          class="form-select"
+          name="status"
+          aria-label="Default select example"
+        >
+          <option selected>No action</option>
+          <option value="done">Done</option>
+          <option value="notDone">Not Done</option>
+        </select>
+      </div>
+
+      <!-- submit form -->
+      <div class="col">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+    </form>
+  </div>
+  <% }) %>
+</div>

@@ -1,0 +1,86 @@
+body {
+  background-color: #cfe2ff;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#today {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: #a5c0ea solid 1px;
+  box-shadow: 0 0 10px #a5c0ea;
+  background-color: #a5c0ea;
+  /* color: blue; */
+}
+
+.habit-box {
+  box-shadow: 0 0 10px gray;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0 0 10px gray;
+}
+
+#habit,
+#date {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.success {
+  border: green solid 1px;
+  height: 15%;
+  margin-top: 4%;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.wrong {
+  border: red solid 1px;
+  height: 15%;
+  margin-top: 4%;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.record-success {
+  border: green solid 1px;
+  height: 15%;
+  margin-top: 2%;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.record-wrong {
+  border: red solid 1px;
+  height: 15%;
+  margin-top: 2%;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+  .habit-box {
+    box-shadow: 0 0 5px gray;
+    border-radius: 15%;
+  }
+  #habit {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .success,
+  .wrong {
+    margin-top: 6%;
+  }
+
+  .record-success,
+  .record-wrong {
+    margin-top: 6%;
+  }
+}

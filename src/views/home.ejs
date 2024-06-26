@@ -1,0 +1,71 @@
+<!-- if no habits are there -->
+
+<% if(habits.length==0){ %>
+<h3>
+  This habit tracker is designed to add multiple habits to track like reading a
+  book, going to the gym etc and to keep track each habit everyday
+</h3>
+<br />
+<h3>Start adding habits and keep track of them</h3>
+<% }else{ %>
+
+<!-- if habits are there -->
+<!-- add today date -->
+<h3 id="today">Today's habits</h3>
+<br />
+
+<!-- habit boxes -->
+<div class="row grid gap-5">
+  <% habits.forEach((habit) => { %>
+  <!-- firstbox -->
+  <div class="col-auto border border-dark-subtle p-4 habit-box">
+    <form class="row g-3" method="post" action="/<%=habit._id%>">
+      <!-- habit name -->
+      <div class="col-auto">
+        <label for="habit" class="visually-hidden">Habit</label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext habit"
+          id="habit"
+          name="habitName"
+          value="<%=habit.habitName%>"
+        />
+      </div>
+
+      <% if(habit.status == "notDone"){ %>
+      <!-- not done action -->
+      <div class="col-auto wrong">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <% }else if(habit.status == "done"){ %>
+      <!-- done action -->
+      <div class="col-auto success">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <% } %>
+
+      <!-- seclect the action -->
+      <div class="col">
+        <label for="select-habit" class="visually-hidden">Select</label>
+        <select
+          class="form-select"
+          name="status"
+          aria-label="Default select example"
+        >
+          <option value="noAction" selected>No action</option>
+          <option value="done">Done</option>
+          <option value="notDone">Not Done</option>
+        </select>
+      </div>
+
+      <!-- submit form -->
+      <div class="col">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+    </form>
+  </div>
+  <% }) %>
+</div>
+
+<% } %>
