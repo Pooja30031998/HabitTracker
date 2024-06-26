@@ -42,7 +42,7 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 - status:200
 - Description: Retrieve the record page for a specific habit.
 
-### Post a new habit (Habit page is a model. Thus not need for Get habit page) 
+### Post a new habit (Habit page is a model. Thus no need for Get habit page) 
 - URL: ```/```
 - Method: ```POST```
 - status:200
