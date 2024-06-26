@@ -25,7 +25,7 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 
 ### Get Home Page
 - URL: ``` / ```
-- Method: GET
+- Method: ```GET```
 - status:200
 - Description: Get today's habit tracher page
 
@@ -35,38 +35,38 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 - status:200
 - Description: Retrieve all habits.
 
-## Get Habit Record Page
-URL: /record/:id
-Method: GET
+### Get Habit Record Page
+URL: ```/record/:id```
+Method: ```GET```
 Request Parameters: id (ID of the habit schema)
 status:200
 Description: Retrieve the record page for a specific habit.
 
-## Post a new habit (Habit page is a model. Thus not need for Get habit page) 
-URL: /
-Method: POST
-status:200
-Description: Post a new habit and track it in today's page.
+### Post a new habit (Habit page is a model. Thus not need for Get habit page) 
+- URL: ```/```
+- Method: ```POST```
+- status:200
+- Description: Post a new habit and track it in today's page.
 
-## Update Habit Status in today's page
-URL: /:id
-Method: POST
-status:200
-Request Parameters: id (ID of the dailyhabit schema)
-Response: Redirect to today's tracking page after updating the new habit status.
+### Update Habit Status in today's page
+- URL: ```/:id```
+- Method: ```POST```
+- status:200
+- Request Parameters: id (ID of the dailyhabit schema)
+- Response: Redirect to today's tracking page after updating the new habit status.
 
-## Update Habit Status in record page
-URL: /record/:id
-Method: POST
-status:200
-Request Parameters: id (ID of the dailyhabit schema)
-Response: Redirect to record tracking page after updating the new habit status.
+### Update Habit Status in record page
+- URL: ```/record/:id```
+- Method: ```POST```
+- status:200
+- Request Parameters: id (ID of the dailyhabit schema)
+- Response: Redirect to record tracking page after updating the new habit status.
 
-## Error page
-URL: /500
-Method: GET
-status:500
-Description: To show server side error
+### Error page
+- URL: ```/500```
+- Method: ```GET```
+- status:500
+- Description: To show server side error
 
 # Contributing
 Contributions are welcome! Please create a new branch for your changes and submit a pull request for review.
