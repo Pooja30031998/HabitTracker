@@ -24,16 +24,16 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 ## Routes
 
 ### Get Home Page
-URL: /
-Method: GET
-status:200
-Description: Get today's habit tracher page
+- URL: /
+- Method: GET
+- status:200
+- Description: Get today's habit tracher page
 
 ### Get all Habits
-URL: /habits
-Method: GET
-status:200
-Description: Retrieve all habits.
+- URL: /habits
+- Method: GET
+- status:200
+- Description: Retrieve all habits.
 
 ## Get Habit Record Page
 URL: /record/:id
