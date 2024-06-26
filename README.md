@@ -16,9 +16,19 @@ The Habit Tracker app enables users to create and manage their habits effectivel
 
 # Installation
 1. Clone the repository
-2. Install dependencies using ```npm install```
-3. Set up environment variables in .env file
-4. Start the server using ```node index.js```
+2. Install dependencies using
+   ```
+   npm install
+   ```
+4. Set up environment variables in ```.env``` file
+   ```
+   PORT=5000
+   DB_URL=your_mongodb_url/your DB name
+   ```
+6. Start the server using
+   ```
+   node index.js
+   ```
 
 # API Documentation
 ## Routes
