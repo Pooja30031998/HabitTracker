@@ -1,7 +1,7 @@
 # HabitTracker
 This is a full-stack Habit Tracker web application built with Node.js, Express.js, and EJS. It allows users to define their habits and track their progress over time.
 
-# Descrition
+# Description
 The Habit Tracker app enables users to create and manage their habits effectively. Users can define various habits they want to track, such as reading a book, going for a run, drinking water, etc. Once defined, users can mark each habit as done, not done, or no action for each day. The app provides a visual representation of habit progress and shows the number of days the user completed that habit since the user created the habit, making it easy for users to stay motivated and consistent with their habits.
 
 # Features
